@@ -1,4 +1,4 @@
-const API_BASE = const API_BASE = const API_BASE = "https://h2s-build-with-ai-hackathon.onrender.com";
+const API_BASE = "https://h2s-build-with-ai-hackathon.onrender.com";
 
 const STATES = [
   "Andhra Pradesh", "Assam", "Bihar", "Chhattisgarh", "Delhi", "Gujarat", "Haryana",
