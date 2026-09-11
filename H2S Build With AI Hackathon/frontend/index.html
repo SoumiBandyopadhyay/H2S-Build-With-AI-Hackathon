@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Citizen Voice — Digital Public Infrastructure</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>🇮🇳 Citizen Voice</h1>
+    <p>Tell us about infrastructure problems in your area — in your own language</p>
+    <a href="admin.html" class="admin-link">Admin Dashboard →</a>
+  </header>
+
+  <main class="container">
+    <form id="complaintForm" class="card">
+      <label for="state">Your State</label>
+      <select id="state" title="Select your state" required></select>
+
+      <label>Your District</label>
+      <input type="text" id="district" placeholder="e.g. Patna" required>
+
+      <label for="language">Language</label>
+      <select id="language" title="Select your preferred language">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी (Hindi)</option>
+        <option value="bn">বাংলা (Bengali)</option>
+        <option value="ta">தமிழ் (Tamil)</option>
+        <option value="te">తెలుగు (Telugu)</option>
+        <option value="mr">मराठी (Marathi)</option>
+      </select>
+
+      <label>Describe the problem</label>
+      <div class="text-input-row">
+        <textarea id="complaintText" rows="4" placeholder="Type or use the mic to speak..." required></textarea>
+        <button type="button" id="micBtn" title="Speak">🎤</button>
+      </div>
+      <p id="micStatus" class="hint"></p>
+
+      <button type="submit" class="submit-btn">Submit Complaint</button>
+    </form>
+
+    <div id="resultCard" class="card result hidden">
+      <h3>✅ Submitted!</h3>
+      <p><strong>AI-detected category:</strong> <span id="resCategory"></span></p>
+      <p><strong>Urgency:</strong> <span id="resUrgency"></span>/5</p>
+      <p><strong>Summary:</strong> <span id="resSummary"></span></p>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

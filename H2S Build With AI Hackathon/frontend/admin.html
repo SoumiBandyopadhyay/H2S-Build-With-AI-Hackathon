@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — DPI Governance</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>📊 Policymaker Dashboard</h1>
+    <p>National view of citizen infrastructure requests</p>
+    <a href="index.html" class="admin-link">← Citizen Form</a>
+  </header>
+
+  <main class="container dashboard">
+    <div class="stats-row">
+      <div class="stat-box"><span id="statTotal">-</span><label>Total Complaints</label></div>
+      <div class="stat-box"><span id="statUrgency">-</span><label>Avg Urgency</label></div>
+      <div class="stat-box"><span id="statStates">-</span><label>States Covered</label></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Category Breakdown</h3>
+        <canvas id="categoryChart"></canvas>
+      </div>
+      <div class="card">
+        <h3>Hotspot Map</h3>
+        <div id="map" style="height:350px; border-radius:8px;"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🎯 Top Priority Districts — AI Recommendations</h3>
+      <div id="hotspotList"></div>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
