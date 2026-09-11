@@ -1,5 +1,4 @@
-const API_BASE = "http://localhost:8000";
-
+const API_BASE = const API_BASE = const API_BASE = "https://h2s-build-with-ai-hackathon.onrender.com";
 async function loadDashboard() {
   const stats = await fetch(`${API_BASE}/api/dashboard-stats`).then((r) => r.json());
   document.getElementById("statTotal").textContent = stats.total_complaints;
